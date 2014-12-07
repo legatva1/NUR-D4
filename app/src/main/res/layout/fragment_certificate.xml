@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <EditText
+        android:id="@+id/username"
+        android:minHeight="?android:listPreferredItemHeight"
+        android:hint="@string/username"
+        android:layout_width="match_parent"
+        android:layout_height="64dp" />
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/login"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:text="@string/login"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:background="@drawable/button"-->
+
+        <!--/>-->
+
+</LinearLayout>

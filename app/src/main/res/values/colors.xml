@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary_light">#555555</color>
+    <color name="primary_dark">#888888</color>
+    <color name="primary_accent">#668830</color>
+    <color name="splash_screen">#1c1c1c</color>
+
+    <color name="card_selected">#C5E3BF</color>
+    <color name="card_not_selected">#ffffff</color>
+    <color name="required_text">#aaaaaa</color>
+
+    <color name="button">#81C33B</color>
+    <color name="button_pressed">#4a9a17</color>
+    <color name="white">#ffffff</color>
+</resources>

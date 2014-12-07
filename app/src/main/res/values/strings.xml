@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MojeID</string>
+    <string name="title_password">Heslo</string>
+    <string name="email">E-mail</string>
+    <string name="title_certificate">Certifikát</string>
+    <string name="title_passwordotp">Heslo + OTP</string>
+    <string name="username">Uživatelské jméno</string>
+    <string name="password">Heslo</string>
+    <string name="otp">Jednorázové heslo (OTP)</string>
+    <string name="login">Přihlásit se</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="forgotten_password">Zapomenuté heslo</string>
+    <string name="title_activity_information_transfer">InformationTransferActivity</string>
+    <string name="title_transfer_information">Předání údajů</string>
+    <string name="transfer_information">Předat</string>
+    <string name="required">(povinný)</string>
+    <string name="confirn_new_password">Obnovit heslo</string>
+    <string name="title_activity_forgotten_password">Obnovení hesla</string>
+    <string name="code">Kontrolní kód</string>
+    <string name="new_code">Jiný kód</string>
+    <string name="new_password">Zadejte e-mail a kontrolní kód. Instrukce k nastavení nového hesla Vám zašleme na e-mail.</string>
+
+</resources>
