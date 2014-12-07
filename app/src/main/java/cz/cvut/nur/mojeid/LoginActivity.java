@@ -1,12 +1,10 @@
 package cz.cvut.nur.mojeid;
 
-import java.util.Locale;
 
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,19 +14,13 @@ import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.widget.PopupMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 
 public class LoginActivity extends Activity{
 
@@ -116,6 +108,38 @@ public class LoginActivity extends Activity{
             }
         });
 
+        final Activity ac=this;
+
+        final ImageView overflow = (ImageView) findViewById(R.id.overflow);
+        overflow.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //Creating the instance of PopupMenu
+                PopupMenu popup = new PopupMenu(LoginActivity.this, overflow);
+                //Inflating the Popup using xml file
+                popup.getMenuInflater().inflate(R.menu.login, popup.getMenu());
+
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int id = item.getItemId();
+                        if (id == R.id.action_settings) {
+                            return true;
+                        }
+                        if (id == R.id.action_forgotten_password) {
+                            Intent intent=new Intent(ac,ForgottenPasswordActivity.class);
+                            startActivity(intent);
+
+                            return true;
+                        }
+                        return true;
+                    }
+                });
+
+                popup.show();//showing popup menu
+            }
+        });//closing the setOnClickListener method
 
 
     }
@@ -124,7 +148,7 @@ public class LoginActivity extends Activity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
+        //getMenuInflater().inflate(R.menu.login, menu);
         return true;
     }
 
@@ -133,16 +157,16 @@ public class LoginActivity extends Activity{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.action_forgotten_password) {
-            Intent intent=new Intent(this,ForgottenPasswordActivity.class);
-            startActivity(intent);
-
-            return true;
-        }
+//        int id = item.getItemId();
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//        if (id == R.id.action_forgotten_password) {
+//            Intent intent=new Intent(this,ForgottenPasswordActivity.class);
+//            startActivity(intent);
+//
+//            return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -162,7 +186,7 @@ public class LoginActivity extends Activity{
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 
-            Fragment fragment = null;
+            Fragment fragment;
 
             switch (position) {
                 case 0:
@@ -190,7 +214,7 @@ public class LoginActivity extends Activity{
 
         @Override
         public CharSequence getPageTitle(int position) {
-            Locale l = Locale.getDefault();
+
             switch (position) {
                 case 0:
                     return getString(R.string.title_password);
