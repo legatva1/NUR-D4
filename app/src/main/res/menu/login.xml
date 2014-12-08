@@ -5,7 +5,5 @@
         android:title="@string/forgotten_password"
        />
 
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-       />
+
 </menu>

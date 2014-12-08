@@ -14,7 +14,7 @@
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="forgotten_password">Zapomenuté heslo</string>
     <string name="title_activity_information_transfer">InformationTransferActivity</string>
-    <string name="title_transfer_information">Předání údajů</string>
+    <string name="title_transfer_information">Předání údajů >>> eshop.cz</string>
     <string name="transfer_information">Předat</string>
     <string name="required">(povinný)</string>
     <string name="confirn_new_password">Obnovit heslo</string>

@@ -124,9 +124,7 @@ public class LoginActivity extends Activity{
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
                         int id = item.getItemId();
-                        if (id == R.id.action_settings) {
-                            return true;
-                        }
+
                         if (id == R.id.action_forgotten_password) {
                             Intent intent=new Intent(ac,ForgottenPasswordActivity.class);
                             startActivity(intent);
